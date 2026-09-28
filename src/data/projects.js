@@ -1,36 +1,35 @@
 export const TIKTOK_URL = 'https://www.tiktok.com/@zaouche_promotion'
 export const FACEBOOK_URL = 'https://www.facebook.com/share/19QF9mTQp9/'
-export const WHATSAPP = 'https://wa.me/213560000000?text=Bonjour%20Zaouche%20Promotion%20!'
-export const PHONE_LABEL = '+213 560 00 00 00'
+export const WHATSAPP = 'https://wa.me/213771035153?text=Bonjour%20Zaouche%20Promotion%20!'
+export const PHONE_LABEL = '+213 771 03 51 53'
+export const PHONE2_LABEL = '+213 670 20 90 99'
 
-// Remplace VIDEO_HOME par ton vrai fichier : public/video-home.mp4
-export const VIDEO_HOME =
-  'https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4'
-export const VIDEO_POSTER =
-  'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop'
+// Vidéo réelle TikTok @zaouche_promotion (Résidence Rimas, Oran)
+export const VIDEO_HOME = './video-rimas.mp4'
+export const VIDEO_POSTER = './real/rimas-cover.jpg'
 
 const img = (id) => `https://images.unsplash.com/${id}?q=80&w=1200&auto=format&fit=crop`
 
 export const projects = [
   {
-    slug: 'residence-les-oliviers',
+    slug: 'residence-rimas',
     status: 'ongoing',
-    wilaya_fr: 'Alger — Draria', wilaya_ar: 'الجزائر — درارية',
-    price: '1.85 Mds DA', surface: '78–142 m²', rooms: 'F2 → F4',
-    title_fr: 'Résidence Les Oliviers', title_ar: 'إقامة الزيتون',
-    desc_fr: 'Double ascenseur, parking sous-sol, façade ventilée, cuisine équipée. Gros œuvre terminé — finitions en cours filmées chaque semaine.',
-    desc_ar: 'مصعد مزدوج، مرآب تحت الأرض، واجهة مهواة، مطبخ مجهز. الهيكل منتهي — التشطيبات جارية وتُصوَّر كل أسبوع.',
-    images: [img('photo-1545324418-cc1a3fa10c00'), img('photo-1560448204-e02f11c3d0e2'), img('photo-1600607687939-ce8a6c25118c')],
+    wilaya_fr: 'Oran — Hai Khemisti, Bd Millenium', wilaya_ar: 'وهران — حي خميستي، شارع ميلينيوم',
+    price: 'Prix sur appel', surface: '127 m²', rooms: 'F5',
+    title_fr: 'Résidence Rimas', title_ar: 'إقامة ريماس',
+    desc_fr: "8 étages, appartement par palier. Cuisine moderne, climatisé, ascenseur, télésurveillance, matériaux de qualité. Paiement par tranches selon l'avancement des travaux. Derniers disponibles : 6ème, 7ème et 8ème étage.",
+    desc_ar: '8 طوابق، شقة في كل طابق. مطبخ عصري، تكييف، مصعد، مراقبة بالكاميرات، مواد عالية الجودة. الدفع بالتقسيط حسب تقدم الأشغال. المتبقي: الطوابق 6 و7 و8.',
+    images: ['./real/rimas-cover.jpg', './real/chantier-80.jpg', img('photo-1600607687939-ce8a6c25118c')],
   },
   {
-    slug: 'residence-marina-bay',
+    slug: 'f4-haut-standing',
     status: 'ongoing',
-    wilaya_fr: 'Alger — Bordj El Kiffan', wilaya_ar: 'الجزائر — برج الكيفان',
-    price: '2.40 Mds DA', surface: '95–180 m²', rooms: 'F3 → F5',
-    title_fr: 'Résidence Marina Bay', title_ar: 'إقامة مارينا باي',
-    desc_fr: 'Vue mer, piscine collective, spa, domotique. Idéale diaspora — visio chantier + paiement sécurisé notaire.',
-    desc_ar: 'إطلالة على البحر، مسبح جماعي، سبا، منزل ذكي. مثالية للجالية — فيديو مباشر ودفع آمن عند الموثق.',
-    images: [img('photo-1512917774080-9991f1c4c750'), img('photo-1600596542815-ffad4c1539a9'), img('photo-1600566753086-00f18fb6b3ea')],
+    wilaya_fr: 'Oran', wilaya_ar: 'وهران',
+    price: 'Prix sur appel', surface: '—', rooms: 'F4',
+    title_fr: 'F4 Haut Standing', title_ar: 'شقة F4 راقية',
+    desc_fr: "Appartements F4 haut standing présentés sur TikTok. Finitions soignées, appelez pour visiter et connaître les disponibilités.",
+    desc_ar: 'شقق F4 راقية معروضة على تيك توك. تشطيبات متقنة، اتصلوا للزيارة ومعرفة المتوفر.',
+    images: ['./real/f4-standing-1.jpg', img('photo-1560448204-e02f11c3d0e2'), img('photo-1600566753086-00f18fb6b3ea')],
   },
   {
     slug: 'residence-el-yasmine',

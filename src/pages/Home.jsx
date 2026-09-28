@@ -8,7 +8,7 @@ import BeforeAfter from '../components/BeforeAfter'
 
 export default function Home() {
   const { lang, t } = useLang()
-  const feat = projects[1]
+  const feat = projects[0]
   return (
     <div>
       {/* HERO VIDEO */}

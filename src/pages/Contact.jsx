@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { MessageCircle, Clapperboard, Share2, Send } from 'lucide-react'
 import { useLang } from '../i18n'
-import { WHATSAPP, PHONE_LABEL, TIKTOK_URL, FACEBOOK_URL } from '../data/projects'
+import { WHATSAPP, PHONE_LABEL, PHONE2_LABEL, TIKTOK_URL, FACEBOOK_URL } from '../data/projects'
 
 export default function Contact() {
   const { t } = useLang()
@@ -9,7 +9,7 @@ export default function Contact() {
   const send = (e) => {
     e.preventDefault()
     const text = encodeURIComponent(`Bonjour Zaouche ! Je suis ${f.name} (${f.phone}) — ${f.msg}`)
-    window.open(`https://wa.me/213560000000?text=${text}`, '_blank')
+    window.open(`${WHATSAPP.split('?')[0]}?text=${text}`, '_blank')
   }
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20 pt-28">
@@ -25,6 +25,7 @@ export default function Contact() {
         </form>
         <div className="space-y-3">
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl bg-[#C8A96A] p-6 font-black text-black"><MessageCircle size={22} /> WhatsApp : {PHONE_LABEL}</a>
+          <a href="https://wa.me/213670209099" target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl border border-[#C8A96A]/40 bg-[#C8A96A]/10 p-6 font-bold"><MessageCircle size={22} className="text-[#C8A96A]" /> {PHONE2_LABEL}</a>
           <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 font-bold"><Clapperboard size={22} className="text-[#C8A96A]" /> TikTok : @zaouche_promotion</a>
           <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 font-bold"><Share2 size={22} className="text-[#C8A96A]" /> Facebook : Zaouche Promotion</a>
         </div>
