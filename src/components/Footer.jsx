@@ -1,9 +1,12 @@
 import { Clapperboard, Share2, Camera } from 'lucide-react'
-import { TIKTOK_URL, FACEBOOK_URL } from '../data/projects'
+import { useSiteData } from '../admin/store'
 import { useLang } from '../i18n'
 
 export default function Footer() {
   const { t } = useLang()
+  const { settings } = useSiteData()
+  const TIKTOK_URL = settings.tiktok
+  const FACEBOOK_URL = settings.facebook
   return (
     <footer className="border-t border-white/10 bg-[#0A0A0B] pb-24 md:pb-8">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3">

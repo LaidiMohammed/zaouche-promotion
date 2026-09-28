@@ -2,13 +2,18 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronDown, Play, MessageCircle, Clapperboard, ArrowRight, MapPin } from 'lucide-react'
 import { useLang } from '../i18n'
-import { projects, TIKTOK_URL, WHATSAPP, VIDEO_HOME, VIDEO_POSTER } from '../data/projects'
+import { useSiteData } from '../admin/store'
 import Marquee from '../components/Marquee'
 import BeforeAfter from '../components/BeforeAfter'
 
 export default function Home() {
   const { lang, t } = useLang()
-  const feat = projects[0]
+  const { projects, settings } = useSiteData()
+  const WHATSAPP = settings.whatsapp
+  const TIKTOK_URL = settings.tiktok
+  const VIDEO_HOME = settings.videoHome
+  const VIDEO_POSTER = settings.videoPoster
+  const feat = projects[0] || { slug: '', images: [''], title_fr: '', title_ar: '', wilaya_fr: '', wilaya_ar: '', price: '' }
   return (
     <div>
       {/* HERO VIDEO */}

@@ -1,12 +1,16 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, MapPin, Ruler, BedDouble, MessageCircle, Clapperboard } from 'lucide-react'
 import { useLang } from '../i18n'
-import { projects, TIKTOK_URL, WHATSAPP } from '../data/projects'
+import { useSiteData } from '../admin/store'
 
 export default function ProjetDetail() {
   const { slug } = useParams()
   const { lang, t } = useLang()
+  const { projects, settings } = useSiteData()
+  const TIKTOK_URL = settings.tiktok
+  const WHATSAPP = settings.whatsapp
   const p = projects.find((x) => x.slug === slug) || projects[0]
+  if (!p) return <div className="mx-auto max-w-7xl px-4 pb-20 pt-28">—</div>
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20 pt-28">
       <Link to="/projets" className="inline-flex items-center gap-1 text-sm font-bold text-[#C8A96A]"><ArrowLeft size={16} /> {t.detail.back}</Link>

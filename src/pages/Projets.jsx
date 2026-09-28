@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
-import { projects } from '../data/projects'
+import { useSiteData } from '../admin/store'
 
 export default function Projets() {
   const { lang, t } = useLang()
+  const { projects } = useSiteData()
   const [f, setF] = useState('all')
   const list = projects.filter((p) => f === 'all' || (f === 'ongoing' ? p.status === 'ongoing' : p.status === 'delivered'))
   const btn = (k, label) => (
