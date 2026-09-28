@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0b;
+  --color-coal: #131316;
+  --color-sand: #c8a96a;
+  --color-sandlight: #e8d5a3;
+  --color-bone: #f4f1ea;
+  --font-display: "Space Grotesk", "Cairo", sans-serif;
+  --font-arabic: "Cairo", "Space Grotesk", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: #0a0a0b;
+  color: #f4f1ea;
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+[dir="rtl"] body, [dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+
+/* film grain */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  z-index: 60;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 22s linear infinite; }
+[dir="rtl"] .animate-marquee { animation-direction: reverse; }
+
+/* vertical snap feed */
+.snap-feed {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.snap-feed::-webkit-scrollbar { display: none; }
+.snap-item { scroll-snap-align: start; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* diagonal clip */
+.clip-slant { clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 calc(100% - 4vw)); }
+.clip-slant-r { clip-path: polygon(0 4vw, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(200,169,106,.7);
+  color: transparent;
+}
+
+/* swipe hint */
+@keyframes swipeHint {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: .4; }
+}
+.animate-swipe { animation: swipeHint 1.8s ease-in-out infinite; }
+
+video::-webkit-media-controls { display: none !important; }
