@@ -2,7 +2,8 @@
 
 Site vitrine TikTok-style, bilingue FR/AR, présentation front-end.
 
-- **Live :** https://laidimohammed.github.io/zaouche-promotion/
+- **Live (Vercel) :** https://zaouche-promotion.vercel.app
+- **Live (GitHub Pages) :** https://laidimohammed.github.io/zaouche-promotion/
 - **Repo :** https://github.com/LaidiMohammed/zaouche-promotion
 - **TikTok :** https://www.tiktok.com/@zaouche_promotion
 
