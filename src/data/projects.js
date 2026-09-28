@@ -4,9 +4,11 @@ export const WHATSAPP = 'https://wa.me/213771035153?text=Bonjour%20Zaouche%20Pro
 export const PHONE_LABEL = '+213 771 03 51 53'
 export const PHONE2_LABEL = '+213 670 20 90 99'
 
-// Vidéo réelle TikTok @zaouche_promotion (Résidence Rimas, Oran)
-export const VIDEO_HOME = './video-rimas.mp4'
-export const VIDEO_POSTER = './real/rimas-cover.jpg'
+// Vidéo d'ambiance home + posters HD
+export const VIDEO_HOME =
+  'https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4'
+export const VIDEO_POSTER =
+  'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop'
 
 const img = (id) => `https://images.unsplash.com/${id}?q=80&w=1200&auto=format&fit=crop`
 
@@ -19,7 +21,7 @@ export const projects = [
     title_fr: 'Résidence Rimas', title_ar: 'إقامة ريماس',
     desc_fr: "8 étages, appartement par palier. Cuisine moderne, climatisé, ascenseur, télésurveillance, matériaux de qualité. Paiement par tranches selon l'avancement des travaux. Derniers disponibles : 6ème, 7ème et 8ème étage.",
     desc_ar: '8 طوابق، شقة في كل طابق. مطبخ عصري، تكييف، مصعد، مراقبة بالكاميرات، مواد عالية الجودة. الدفع بالتقسيط حسب تقدم الأشغال. المتبقي: الطوابق 6 و7 و8.',
-    images: ['./real/rimas-cover.jpg', './real/chantier-80.jpg', img('photo-1600607687939-ce8a6c25118c')],
+    images: [img('photo-1545324418-cc1a3fa10c00'), img('photo-1560448204-e02f11c3d0e2'), img('photo-1600607687939-ce8a6c25118c')],
   },
   {
     slug: 'f4-haut-standing',
@@ -29,7 +31,7 @@ export const projects = [
     title_fr: 'F4 Haut Standing', title_ar: 'شقة F4 راقية',
     desc_fr: "Appartements F4 haut standing présentés sur TikTok. Finitions soignées, appelez pour visiter et connaître les disponibilités.",
     desc_ar: 'شقق F4 راقية معروضة على تيك توك. تشطيبات متقنة، اتصلوا للزيارة ومعرفة المتوفر.',
-    images: ['./real/f4-standing-1.jpg', img('photo-1560448204-e02f11c3d0e2'), img('photo-1600566753086-00f18fb6b3ea')],
+    images: [img('photo-1512917774080-9991f1c4c750'), img('photo-1600596542815-ffad4c1539a9'), img('photo-1600566753086-00f18fb6b3ea')],
   },
   {
     slug: 'residence-el-yasmine',
