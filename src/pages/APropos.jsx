@@ -1,3 +1,4 @@
+import { BadgeCheck } from 'lucide-react'
 import { useLang } from '../i18n'
 
 export default function APropos() {
@@ -13,7 +14,7 @@ export default function APropos() {
       <div className="mt-6 grid gap-3 md:grid-cols-4">
         {t.about.points.map((x, i) => (
           <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-5 font-bold">
-            <span className="text-[#C8A96A]">✓ </span>{x}
+            <BadgeCheck size={20} className="mb-2 text-[#C8A96A]" />{x}
           </div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { MessageCircle, Clapperboard, Share2, Send } from 'lucide-react'
 import { useLang } from '../i18n'
 import { WHATSAPP, PHONE_LABEL, TIKTOK_URL, FACEBOOK_URL } from '../data/projects'
 
@@ -19,13 +20,13 @@ export default function Contact() {
           <input required placeholder={t.contact.name} value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none focus:border-[#C8A96A]" />
           <input required placeholder={t.contact.phone} value={f.phone} onChange={(e) => setF({ ...f, phone: e.target.value })} className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none focus:border-[#C8A96A]" />
           <textarea required rows={5} placeholder={t.contact.msg} value={f.msg} onChange={(e) => setF({ ...f, msg: e.target.value })} className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none focus:border-[#C8A96A]" />
-          <button className="w-full rounded-full bg-[#C8A96A] py-3 font-black text-black">{t.contact.send}</button>
+          <button className="flex w-full items-center justify-center gap-2 rounded-full bg-[#C8A96A] py-3 font-black text-black"><Send size={18} /> {t.contact.send}</button>
           <p className="text-center text-xs text-white/50">{t.contact.info}</p>
         </form>
         <div className="space-y-3">
-          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="block rounded-3xl bg-[#C8A96A] p-6 font-black text-black">WhatsApp : {PHONE_LABEL}</a>
-          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="block rounded-3xl border border-white/10 bg-white/5 p-6 font-bold">♪ TikTok : @zaouche_promotion</a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="block rounded-3xl border border-white/10 bg-white/5 p-6 font-bold">f Facebook : Zaouche Promotion</a>
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl bg-[#C8A96A] p-6 font-black text-black"><MessageCircle size={22} /> WhatsApp : {PHONE_LABEL}</a>
+          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 font-bold"><Clapperboard size={22} className="text-[#C8A96A]" /> TikTok : @zaouche_promotion</a>
+          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 font-bold"><Share2 size={22} className="text-[#C8A96A]" /> Facebook : Zaouche Promotion</a>
         </div>
       </div>
     </div>

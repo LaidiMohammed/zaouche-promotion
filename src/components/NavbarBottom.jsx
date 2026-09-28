@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { Home, Building2, Info, Mail } from 'lucide-react'
 import { useLang } from '../i18n'
 
 export default function NavbarBottom() {
@@ -9,16 +10,16 @@ export default function NavbarBottom() {
     <nav className="fixed bottom-0 inset-x-0 z-50 border-t border-white/10 bg-[#0A0A0B]/92 backdrop-blur-xl md:hidden" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="flex">
         <NavLink to="/" className={item}>
-          <span className="text-lg">⌂</span><span>{t.nav.home}</span>
+          <Home size={20} strokeWidth={2.2} /><span>{t.nav.home}</span>
         </NavLink>
         <NavLink to="/projets" className={item}>
-          <span className="text-lg">▦</span><span>{t.nav.projects}</span>
+          <Building2 size={20} strokeWidth={2.2} /><span>{t.nav.projects}</span>
         </NavLink>
         <NavLink to="/a-propos" className={item}>
-          <span className="text-lg">◉</span><span>{t.nav.about}</span>
+          <Info size={20} strokeWidth={2.2} /><span>{t.nav.about}</span>
         </NavLink>
         <NavLink to="/contact" className={item}>
-          <span className="text-lg">✉</span><span>{t.nav.contact}</span>
+          <Mail size={20} strokeWidth={2.2} /><span>{t.nav.contact}</span>
         </NavLink>
       </div>
     </nav>

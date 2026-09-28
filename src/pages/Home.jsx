@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { ChevronDown, Play, MessageCircle, Clapperboard, ArrowRight, MapPin } from 'lucide-react'
 import { useLang } from '../i18n'
 import { projects, TIKTOK_URL, WHATSAPP, VIDEO_HOME, VIDEO_POSTER } from '../data/projects'
 import Marquee from '../components/Marquee'
@@ -28,8 +29,8 @@ export default function Home() {
           </h1>
           <p className="mt-4 max-w-xl text-white/70">{t.hero.sub}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link to="/projets" className="rounded-full bg-[#C8A96A] px-6 py-3 font-bold text-black hover:bg-[#E8D5A3] transition">{t.hero.cta1}</Link>
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="rounded-full border border-white/25 bg-white/10 px-6 py-3 font-bold backdrop-blur hover:bg-white/20 transition">{t.hero.cta2}</a>
+            <Link to="/projets" className="inline-flex items-center gap-2 rounded-full bg-[#C8A96A] px-6 py-3 font-bold text-black hover:bg-[#E8D5A3] transition">{t.hero.cta1} <ArrowRight size={18} /></Link>
+            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 font-bold backdrop-blur hover:bg-white/20 transition"><MessageCircle size={18} /> {t.hero.cta2}</a>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
             {t.stats.map((s, i) => (
@@ -39,7 +40,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="animate-swipe mt-8 text-center text-xs text-white/50">↓ {t.hero.swipe}</div>
+          <div className="animate-swipe mt-8 flex items-center justify-center gap-1 text-xs text-white/50"><ChevronDown size={16} /> {t.hero.swipe}</div>
         </div>
       </section>
 
@@ -54,9 +55,9 @@ export default function Home() {
           <div className="absolute bottom-0 p-6 md:p-10">
             <h2 className="text-4xl font-black md:text-6xl">{lang === 'ar' ? feat.title_ar : feat.title_fr}</h2>
             <p className="mt-2 text-white/70">{lang === 'ar' ? feat.wilaya_ar : feat.wilaya_fr} • {feat.price}</p>
-            <div className="mt-4 flex gap-3">
-              <Link to={`/projet/${feat.slug}`} className="rounded-full bg-[#C8A96A] px-5 py-2.5 text-sm font-bold text-black">{t.featured.cta}</Link>
-              <Link to="/projets" className="rounded-full border border-white/25 px-5 py-2.5 text-sm font-bold">{t.featured.all}</Link>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link to={`/projet/${feat.slug}`} className="inline-flex items-center gap-2 rounded-full bg-[#C8A96A] px-5 py-2.5 text-sm font-bold text-black"><Play size={16} /> {t.featured.cta}</Link>
+              <Link to="/projets" className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 text-sm font-bold">{t.featured.all} <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>
@@ -78,8 +79,8 @@ export default function Home() {
               <span className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-bold text-[#C8A96A]">0{i + 1} — {p.status === 'ongoing' ? t.projects.ongoing : t.projects.delivered}</span>
               <div className="absolute bottom-0 w-full p-4">
                 <h3 className="text-xl font-black">{lang === 'ar' ? p.title_ar : p.title_fr}</h3>
-                <p className="text-xs text-white/60">{lang === 'ar' ? p.wilaya_ar : p.wilaya_fr} • {p.price}</p>
-                <Link to={`/projet/${p.slug}`} className="mt-3 inline-block rounded-full bg-white px-4 py-2 text-xs font-black text-black">▶ {t.featured.cta}</Link>
+                <p className="flex items-center gap-1 text-xs text-white/60"><MapPin size={12} /> {lang === 'ar' ? p.wilaya_ar : p.wilaya_fr} • {p.price}</p>
+                <Link to={`/projet/${p.slug}`} className="mt-3 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-black text-black"><Play size={14} /> {t.featured.cta}</Link>
               </div>
             </motion.div>
           ))}
@@ -96,7 +97,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 text-center">
           <p className="text-xs font-black tracking-[0.3em]">{t.social.kicker}</p>
           <h2 className="mt-2 text-4xl font-black md:text-6xl">{t.social.title}</h2>
-          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="mt-6 inline-block rounded-full bg-black px-8 py-4 font-black text-[#C8A96A] hover:scale-105 transition">♪ {t.social.btn}</a>
+          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-8 py-4 font-black text-[#C8A96A] hover:scale-105 transition"><Clapperboard size={20} /> {t.social.btn}</a>
         </div>
       </section>
     </div>

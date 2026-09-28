@@ -1,3 +1,4 @@
+import { Clapperboard, Share2, Camera } from 'lucide-react'
 import { TIKTOK_URL, FACEBOOK_URL } from '../data/projects'
 import { useLang } from '../i18n'
 
@@ -13,10 +14,10 @@ export default function Footer() {
           </div>
           <p className="mt-3 max-w-xs text-sm text-white/55">{t.footer.tagline}</p>
         </div>
-        <div className="flex gap-3">
-          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition">TikTok</a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition">Facebook</a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition">Insta</a>
+        <div className="flex flex-wrap gap-3">
+          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition"><Clapperboard size={16} /> TikTok</a>
+          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition"><Share2 size={16} /> Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold hover:bg-[#C8A96A] hover:text-black transition"><Camera size={16} /> Insta</a>
         </div>
         <p className="text-xs text-white/40 md:text-right">{t.footer.rights}</p>
       </div>

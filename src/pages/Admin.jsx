@@ -1,3 +1,4 @@
+import { Lock } from 'lucide-react'
 import { useLang } from '../i18n'
 
 export default function Admin() {
@@ -9,7 +10,7 @@ export default function Admin() {
       <p className="mx-auto mt-4 max-w-xl text-white/65">{t.admin.desc}</p>
       <div className="mx-auto mt-8 grid gap-3 text-left">
         {['CRUD Projets FR/AR + images + vidéo + prix + statut', 'Vidéo home + hero + réseaux TikTok/FB/Insta', 'Messages contact + stats + login sécurisé'].map((x, i) => (
-          <div key={i} className="rounded-2xl border border-white/10 bg-[#131316] p-4 text-sm text-white/70">🔒 {x}</div>
+          <div key={i} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#131316] p-4 text-sm text-white/70"><Lock size={18} className="shrink-0 text-[#C8A96A]" /> {x}</div>
         ))}
       </div>
     </div>
